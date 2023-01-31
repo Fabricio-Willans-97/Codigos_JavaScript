@@ -1,3 +1,3 @@
-# Curso_JS
+# JavaScript
 
 Colinhas dos comandos basicos do JS
