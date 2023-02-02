@@ -25,7 +25,18 @@ compras[1] = 'carne'
 console.log(compras); 
 
 console.log(compras[3]); 
-************************************************/ 
+***********************************************
+***********************************************
+
+const num = [7, 8, 9]
+num.push(10, 11, 12) //adiciona valor no final
+num.unshift(1, 2, 3) //adiciona valor no inicio
+num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar num)
+
+
+console.log(num)
+
+***********************************************/
 
  
  
@@ -233,18 +244,19 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 console.log(livro1) 
 ***********************************************/ 
 
- 
- 
- 
- 
-/***********************************************
-
-const num = [7, 8, 9]
-num.push(10, 11, 12) //adiciona valor no final
-num.unshift(1, 2, 3) //adiciona valor no inicio
-num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar num)
 
 
-console.log(num)
 
-***********************************************/
+
+/***********************************************/
+
+const filmes = [
+    {id: 1, nomeFilme: 'Matrix'},
+    {id: 2, nomeFilme: 'John Wick'},
+    {id: 3, nomeFilme: 'Caça Fantasmas'}
+]
+
+console.log(filmes.find(filmes => filmes.nomeFilme == 'Matrix'
+));
+
+/***********************************************/
