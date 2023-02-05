@@ -14,6 +14,7 @@ console.log(roupa)
 ************************************************/ 
 
  
+
  
  
                     // ARRAY
@@ -27,16 +28,117 @@ console.log(compras);
 console.log(compras[3]); 
 ***********************************************
 ***********************************************
+//ADICIONANDO VALORES NA ARRAY
 
 const num = [7, 8, 9]
-num.push(10, 11, 12) //adiciona valor no final
-num.unshift(1, 2, 3) //adiciona valor no inicio
-num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar num)
+num.push(10, 11, 12) //adiciona valor no final //pop remove ultimo valor
+num.unshift(1, 2, 3) //adiciona valor no inicio //shift remove primeiro valor
+num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar/substituir num)
 
 
 console.log(num)
+***********************************************
+***********************************************
+//LOCALIZANDO ITENS NUMA ARRAY
 
+const filmes = [
+    {id: 1, nomeFilme: 'Matrix'},
+    {id: 2, nomeFilme: 'John Wick'},
+    {id: 3, nomeFilme: 'Caça Fantasmas'}
+]
+
+// console.log(filmes.includes({id: 1, nomeFilme: 'Matrix'}))
+
+//console.log(filmes.find(function(movie) {
+//   return movie.nomeFilme == 'Matrix'
+//})) 
+
+console.log(filmes.find(filmes => filmes.nomeFilme == 'Matrix'
+)); //ARROW FUNCTION
+
+***********************************************
+***********************************************
+//REMOVENDO ITENS DA ARRAY
+
+const num = [5, 6, 7, 8]
+const final = num.splice(2, 1) //a partir do index 2 remover 1 item
+
+console.log(num)
+console.log(final)
+
+***********************************************
+***********************************************
+//ESVAZIANDO ARRAY
+
+let num = [5, 6, 7, 8]
+
+//num = []
+//num.length = 0
+//num.splice(0, num.length)
+console.log(num);
+
+***********************************************
+***********************************************
+//CONCATENANDO ARRAY
+let numbers = [5, 6, 7, 8]
+let letters = ['a', 'b', 'c']
+
+all = numbers.concat(letters) //concatenar array
+half = all.slice(3, 5) //dividir array (inicio/fim)
+
+console.log(all)
+console.log(half)
+
+***********************************************
+***********************************************
+//JOIN ARRRAY
+let clientes = ["Andre", "Jose", "Marcela"]
+
+let clientsJoin = clientes.join('.')
+
+console.log(clientsJoin)
+
+
+***********************************************
+***********************************************
+//REVERTENDO ARRAY
+
+let clientes = ["Andre", "Jose", "Marcela"]
+
+//clientes.sort()
+clientes.reverse()
+
+console.log(clientes)
+
+
+***********************************************
+***********************************************
+//VERIRICANDO ELEMENTOS NA ARRAY
+
+const tempLondon = [18, -13, 8, 2, 4]
+
+const tempPositive = tempLondon.every(function(value) {
+    return value >= 0
+})
+
+console.log(tempPositive) //valores true or false
+
+
+***********************************************
+***********************************************
+//FILTRANDO VALORES ARRAY
+
+const tempLondon = [18, -13, 8, 2, 4]
+
+const tempPositive = tempLondon.filter(function(value) {
+    return value >= 0
+})
+
+// const tempPositive = tempLondon.filter(value => value >= 0) //ARROW FUNCTION
+
+console.log(tempPositive) //valores positivo
 ***********************************************/
+
 
  
  
@@ -63,6 +165,7 @@ console.log(porcentagem10(20))
 
 ************************************************/ 
 
+
  
  
  
@@ -75,6 +178,7 @@ let speed = driver > 110 ? 'Acima' : 'Abaixo'
 console.log(speed) 
 ************************************************/
  
+
  
  
  
@@ -91,6 +195,7 @@ console.log(podeVotar)
 let podeViajar = !podeVotar 
 console.log(podeViajar) 
 ************************************************/ 
+
 
  
  
@@ -109,6 +214,7 @@ else {
     console.log('Velocidade baixa'); 
 } 
 ************************************************/ 
+
 
  
  
@@ -132,6 +238,7 @@ console.log('Esse Aeroporto não existe');
 } 
 ***********************************************/ 
  
+
  
  
 
@@ -190,6 +297,7 @@ while (i <= 10) {
 
 
 
+
         //FACTORY E CONSTRUCTOR
 /*********************************************** 
 const livro = { 
@@ -243,20 +351,3 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ***********************************************/ 
-
-
-
-
-
-/***********************************************/
-
-const filmes = [
-    {id: 1, nomeFilme: 'Matrix'},
-    {id: 2, nomeFilme: 'John Wick'},
-    {id: 3, nomeFilme: 'Caça Fantasmas'}
-]
-
-console.log(filmes.find(filmes => filmes.nomeFilme == 'Matrix'
-));
-
-/***********************************************/
