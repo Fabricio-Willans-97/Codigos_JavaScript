@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora Simples JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css" >
+	<script type="text/javascript" src="scripts.js" defer></script> 
+</head>
+<body>
+	<div class="wrapper">
+		<h2>Calculadora Simples com JavaScript</h2>
+
+		<input type="text" id="num-one" name="num-one">
+		<input type="text" id="num-two" name="num-two"> <br><br>
+
+		<input type="radio" id="box1" name="sign-area" value="add" checked><b>( + ) </b>
+		<input type="radio" id="box2" name="sign-area" value="subtract"><b>( - ) </b>
+		<input type="radio" id="box3" name="sign-area" value="multiply"><b>( * ) </b>
+		<input type="radio" id="box4" name="sign-area" value="divide"><b>( / ) </b> <br><br>
+
+		<button onclick="outcome()" type="button">calcular</button>
+		<h1 id="resultArea"></h1>
+	</div>
+	
+
+</body>
+</html>
