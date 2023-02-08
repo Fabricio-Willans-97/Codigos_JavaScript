@@ -1,3 +1,3 @@
 # JavaScript
 
-Colinhas dos comandos basicos do JavasCript
+Comandos e colas basicas do JavasCript
