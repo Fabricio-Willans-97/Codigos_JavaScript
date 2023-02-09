@@ -105,8 +105,8 @@ console.log(clientsJoin)
 
 let clientes = ["Andre", "Jose", "Marcela"]
 
-//clientes.sort()
-clientes.reverse()
+//clientes.sort() //Ordem alfabetica
+clientes.reverse() //Ordem alfabetica reversa
 
 console.log(clientes)
 
