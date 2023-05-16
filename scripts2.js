@@ -53,9 +53,9 @@
 
     let numAleatorio = function(min, max) {
         min = Math.ceil(min);
-        //Math.ceil() retorna o menor número inteiro maior ou igual a "x", ex: Math.floor( 45.95); //  45
+        //Math.ceil() retorna o menor número inteiro maior ou igual a "x", ex: Math.ceil(7.004);  // 8
         max = Math.floor(max);
-        //Math.floor() retorna o menor número inteiro dentre o número "x", ex: Math.ceil(7.004);  // 8
+        //Math.floor() retorna o menor número inteiro dentre o número "x", ex: Math.floor( 45.95); //  45
         console.log(Math.floor(Math.random() * (max - min) + min));
 }
     // Numero minimo e maximo

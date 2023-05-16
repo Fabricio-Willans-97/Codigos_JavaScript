@@ -39,6 +39,42 @@ num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar/substi
 console.log(num)
 ***********************************************
 ***********************************************
+// ADICIONANDO E DELETANDO PROPRIEDADES DE UM OBJETO
+
+let pessoa = {
+    nome: 'Fabricio',
+    idade: 26,
+    profissao: 'programador',
+    endereco: 'rua seila',
+    pais: 'burajiru'
+}
+console.log(pessoa);
+
+delete pessoa.pais //deletando
+pessoa.cor = 'parda' //adicionando
+
+console.log(pessoa);
+***********************************************
+***********************************************
+// COPIANDO PROPRIEDADES DE UM OBJETO
+
+let pessoa = {
+    nome: 'Fabricio',
+    idade: 26,
+    profissao: 'programador',
+}
+
+let dadosEnd = {
+    endereco: 'rua seila',
+    pais: 'burajiru'
+}
+console.log(pessoa);
+console.log(dadosEnd);
+Object.assign(pessoa, dadosEnd)
+console.log(pessoa);
+
+***********************************************
+***********************************************
 //LOCALIZANDO ITENS NUMA ARRAY
 
 const filmes = [
@@ -373,3 +409,5 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ***********************************************/
+
+
