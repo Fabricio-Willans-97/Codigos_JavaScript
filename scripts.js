@@ -11,7 +11,61 @@ let roupa = {
 roupa.itemCor = 'Vermelha' 
 
 console.log(roupa) 
-************************************************/ 
+************************************************
+************************************************
+// COPIAR PROPRIEDADES DE UM OBJETO PARA OUTRO
+
+let pessoa = {
+    nome: 'fulano',
+    idade: 23,
+    profissao: 'programador'
+}
+
+let infoAdicional = {
+    cor: 'parda',
+    altura: '1.85',
+    formacao: 'superior'
+}
+
+// console.log(pessoa);
+//  console.log(infoAdicional);
+Object.assign(pessoa, infoAdicional)
+console.log(pessoa);
+***********************************************
+***********************************************
+// ADICIONANDO E DELETANDO PROPRIEDADES DE UM OBJETO
+
+let pessoa = {
+    nome: 'fulano',
+    idade: 23,
+    profissao: 'programador',
+    cor: 'parda',
+    altura: '1.85',
+    formacao: 'superior'
+}
+console.log(pessoa);
+
+delete pessoa.cor //deletando
+pessoa.cidade = 'belo horinte' //adicionando
+
+console.log(pessoa);
+************************************************
+************************************************
+// VERIFICAR CHAVES DE OBJETOS
+
+let pessoa = {
+    nome: 'fulano',
+    idade: 10,
+    cor: 'parda'
+}
+
+console.log(Object.keys(pessoa));
+************************************************/
+
+
+
+
+
 
  
 
@@ -37,42 +91,6 @@ num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar/substi
 
 
 console.log(num)
-***********************************************
-***********************************************
-// ADICIONANDO E DELETANDO PROPRIEDADES DE UM OBJETO
-
-let pessoa = {
-    nome: 'Fabricio',
-    idade: 26,
-    profissao: 'programador',
-    endereco: 'rua seila',
-    pais: 'burajiru'
-}
-console.log(pessoa);
-
-delete pessoa.pais //deletando
-pessoa.cor = 'parda' //adicionando
-
-console.log(pessoa);
-***********************************************
-***********************************************
-// COPIANDO PROPRIEDADES DE UM OBJETO
-
-let pessoa = {
-    nome: 'Fabricio',
-    idade: 26,
-    profissao: 'programador',
-}
-
-let dadosEnd = {
-    endereco: 'rua seila',
-    pais: 'burajiru'
-}
-console.log(pessoa);
-console.log(dadosEnd);
-Object.assign(pessoa, dadosEnd)
-console.log(pessoa);
-
 ***********************************************
 ***********************************************
 //LOCALIZANDO ITENS NUMA ARRAY
@@ -146,7 +164,6 @@ clientes.reverse() //Ordem alfabetica reversa
 
 console.log(clientes)
 
-
 ***********************************************
 ***********************************************
 //VERIRICANDO ELEMENTOS NA ARRAY
@@ -158,8 +175,6 @@ const tempPositive = tempLondon.every(function(value) {
 })
 
 console.log(tempPositive) //valores true or false
-
-
 ***********************************************
 ***********************************************
 //FILTRANDO VALORES ARRAY
@@ -173,10 +188,24 @@ const tempPositive = tempLondon.filter(function(value) {
 // const tempPositive = tempLondon.filter(value => value >= 0) //ARROW FUNCTION
 
 console.log(tempPositive) //valores positivo
+***********************************************
+***********************************************
+// LOOPS EM ARRAY
+
+let produtos = ['sapato', 'camisa', 'calça', 'bone']
+
+for (let n = 0; n  < produtos.length; n++) {
+    console.log(produtos[n]);
+}
 ***********************************************/
 
 
  
+
+
+
+
+
  
  
                     // FUNCTION
@@ -203,6 +232,11 @@ console.log(porcentagem10(20))
 
 
  
+
+
+
+
+
  
  
             // OPERADOR CONDICIONAL TERNARIO
@@ -216,6 +250,11 @@ console.log(speed)
  
 
  
+
+
+
+
+
  
  
             // OPERADORES LOGICO
@@ -231,6 +270,11 @@ console.log(podeVotar)
 let podeViajar = !podeVotar 
 console.log(podeViajar) 
 ************************************************/ 
+
+
+
+
+
 
 
  
@@ -250,6 +294,11 @@ else {
     console.log('Velocidade baixa'); 
 } 
 ************************************************/ 
+
+
+
+
+
 
 
  
@@ -275,6 +324,11 @@ console.log('Esse Aeroporto não existe');
 ***********************************************/ 
  
 
+
+
+
+
+
  
  
 
@@ -292,7 +346,6 @@ for (i = 0; i <= 50; i++) {
         console.log(`${i} é impar`);
     }
 }
-
 ***********************************************
 ************************************************ 
 
@@ -308,7 +361,6 @@ do {
     console.log('Numero ', i)
     i++
 } while (i <= 10)
-
 ***********************************************
 ************************************************ 
 const myCar = {
@@ -351,6 +403,11 @@ for (let i = 20; i >= 0; i--) {
     console.log(i);
 }
 ***********************************************/
+
+
+
+
+
 
 
 
@@ -409,5 +466,4 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ***********************************************/
-
 
