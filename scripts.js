@@ -79,10 +79,10 @@ compras[1] = 'carne'
 
 console.log(compras); 
 
-console.log(compras[3]); 
+console.log(compras[3]);
 ***********************************************
 ***********************************************
-//ADICIONANDO VALORES NA ARRAY
+//ADICIONANDO E REMOVENDO VALORES NA ARRAY
 
 const num = [7, 8, 9]
 num.push(10, 11, 12) //adiciona valor no final //pop remove ultimo valor
@@ -91,6 +91,16 @@ num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar/substi
 
 
 console.log(num)
+***********************************************
+***********************************************
+// RETORNAR UM ARRAY A PARTIR DE OUTRO ARRAY
+
+
+let numbers = [5, 6, 7, 8, 9]
+
+console.log(numbers.slice(2,4)); // indice 2 até 4
+console.log(numbers.slice(2)); // indice 2 até o fim
+console.log(numbers.slice(2, -3)); // negativo remove os ultimos digito informado
 ***********************************************
 ***********************************************
 //LOCALIZANDO ITENS NUMA ARRAY
@@ -119,6 +129,24 @@ const final = num.splice(2, 1) //a partir do index 2 remover 1 item
 
 console.log(num)
 console.log(final)
+
+***********************************************
+***********************************************
+//forEach
+
+let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco']
+
+numbers.forEach(numero => {
+    console.log(numero);
+})
+
+***********************************************
+***********************************************
+//INVERTER ARRAY
+
+let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco']
+
+console.log(numbers.reverse());
 
 ***********************************************
 ***********************************************
@@ -198,6 +226,52 @@ for (let n = 0; n  < produtos.length; n++) {
     console.log(produtos[n]);
 }
 ***********************************************/
+
+
+
+
+
+
+
+
+
+
+            //METODOS DE STRING
+/************************************************
+// TRIM (Remover tudo que não é string)
+
+let nome = '            Fulano'
+
+console.log(nome.trim);
+************************************************
+************************************************
+// padStart (INSERIR CARACTERES ANTES DA STRING)
+// padEnd (INSERIR CARACTERES DEPOIS DA STRING)
+let numero = '450'
+
+console.log(numero.padStart(6, '0')); // quantidade de caracter e caracter a ser inserido
+console.log(numero.padEnd(6, '0'));
+************************************************
+************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************/
 
 
  
@@ -466,4 +540,3 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ***********************************************/
-
