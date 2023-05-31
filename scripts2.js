@@ -62,3 +62,28 @@
     numAleatorio(-10, 10)
     
 */
+
+
+
+/* 6 Números aleatórios (Mega-sena) /
+
+    function numAleatorio() {
+        min = Math.ceil(1);
+        max = Math.floor(60);
+        let numSorteados = []
+
+        for (let num = numSorteados; num.length <= 5; num.push(randomNumber)) {
+            randomNumber = Math.floor(Math.random() * (max - min) + min)
+                if (numSorteados.includes(randomNumber) == true) {
+                    randomNumber = Math.floor(Math.random() * (max - min) + min)
+                }
+        }
+
+        let numSorteadosOrdem = numSorteados.sort(function(a, b) {
+            return a - b;
+        })
+        console.log(numSorteadosOrdem)
+    }
+    numAleatorio()
+
+*/

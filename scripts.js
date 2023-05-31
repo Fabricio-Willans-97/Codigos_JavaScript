@@ -103,7 +103,7 @@ console.log(numbers.slice(2)); // indice 2 até o fim
 console.log(numbers.slice(2, -3)); // negativo remove os ultimos digito informado
 ***********************************************
 ***********************************************
-//LOCALIZANDO ITENS NUMA ARRAY
+//LOCALIZANDO ITENS NUMA ARRAY (arr.includes)
 
 const filmes = [
     {id: 1, nomeFilme: 'Matrix'},
@@ -120,6 +120,9 @@ const filmes = [
 console.log(filmes.find(filmes => filmes.nomeFilme == 'Matrix'
 )); //ARROW FUNCTION
 
+
+let carros = ['BMW', 'FIAT', 'AUDI']
+console.log(carros.includes('FIAT'))
 ***********************************************
 ***********************************************
 //REMOVENDO ITENS DA ARRAY
