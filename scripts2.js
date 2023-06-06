@@ -84,6 +84,7 @@
         })
         console.log(numSorteadosOrdem)
     }
+
     numAleatorio()
 
 */
