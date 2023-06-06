@@ -1,5 +1,5 @@
                     // OBJETOS
-/************************************************
+/***************************************************************
 
 let roupa = { 
     itemName: 'Camisa', 
@@ -12,8 +12,8 @@ roupa.itemCor = 'Vermelha'
 
 console.log(roupa) 
 ************************************************
-************************************************
-// COPIAR PROPRIEDADES DE UM OBJETO PARA OUTRO
+***************************************************************
+// Object.assign() "COPIAR PROPRIEDADES DE UM OBJETO PARA OUTRO"
 
 let pessoa = {
     nome: 'fulano',
@@ -28,12 +28,14 @@ let infoAdicional = {
 }
 
 // console.log(pessoa);
-//  console.log(infoAdicional);
+// console.log(infoAdicional);
 Object.assign(pessoa, infoAdicional)
 console.log(pessoa);
-***********************************************
-***********************************************
-// ADICIONANDO E DELETANDO PROPRIEDADES DE UM OBJETO
+************************************************
+***************************************************************
+// "ADICIONANDO E DELETANDO PROPRIEDADES DE UM OBJETO"
+// delete objeto.chave      // deletar
+// objeto.chave = 'valor'   //adicionando
 
 let pessoa = {
     nome: 'fulano',
@@ -50,8 +52,8 @@ pessoa.cidade = 'belo horinte' //adicionando
 
 console.log(pessoa);
 ************************************************
-************************************************
-// VERIFICAR CHAVES DE OBJETOS
+***************************************************************
+// Object.keys() "VERIFICAR CHAVES DE OBJETOS"
 
 let pessoa = {
     nome: 'fulano',
@@ -72,38 +74,42 @@ console.log(Object.keys(pessoa));
  
  
                     // ARRAY
-/************************************************ 
+/***************************************************************
 let compras = ['feijão', 'arroz', 'leite', 'pão'] 
 
 compras[1] = 'carne' 
 
 console.log(compras); 
-
 console.log(compras[3]);
-***********************************************
-***********************************************
-//ADICIONANDO E REMOVENDO VALORES NA ARRAY
+************************************************
+***************************************************************
+// "ADICIONANDO E REMOVENDO VALORES NA ARRAY"
+// Array.prototype.push()       // adiciona valor no final da array
+// Array.prototype.pop()        // remove ultimo valor da array
+// Array.prototype.unshift()    // adiciona valor no inicio da array
+// Array.prototype.shift()      // remove primeiro valor da array
+// Array.prototype.splice()     // adiciona val no meio (a partir de / deletar/ substituir val) de uma array
+
 
 const num = [7, 8, 9]
-num.push(10, 11, 12) //adiciona valor no final //pop remove ultimo valor
-num.unshift(1, 2, 3) //adiciona valor no inicio //shift remove primeiro valor
-num.splice(3, 0, 4, 5, 6) //adiciona valor no meio (a partir de / deletar/substituir num)
+num.push(10, 11, 12) 
+num.unshift(1, 2, 3)
+num.splice(3, 0, 4, 5, 6)
 
 
 console.log(num)
-***********************************************
-***********************************************
-// RETORNAR UM ARRAY A PARTIR DE OUTRO ARRAY
-
+************************************************
+***************************************************************
+// Array.prototype.slice()  "RETORNAR UM ARRAY A PARTIR DE OUTRO ARRAY"
 
 let numbers = [5, 6, 7, 8, 9]
 
 console.log(numbers.slice(2,4)); // indice 2 até 4
 console.log(numbers.slice(2)); // indice 2 até o fim
 console.log(numbers.slice(2, -3)); // negativo remove os ultimos digito informado
-***********************************************
-***********************************************
-//LOCALIZANDO ITENS NUMA ARRAY (arr.includes)
+************************************************
+***************************************************************
+// Array.prototype.includes() "LOCALIZANDO ITENS NUMA ARRAY"
 
 const filmes = [
     {id: 1, nomeFilme: 'Matrix'},
@@ -123,9 +129,9 @@ console.log(filmes.find(filmes => filmes.nomeFilme == 'Matrix'
 
 let carros = ['BMW', 'FIAT', 'AUDI']
 console.log(carros.includes('FIAT'))
-***********************************************
-***********************************************
-//REMOVENDO ITENS DA ARRAY
+************************************************
+***************************************************************
+// Array.prototype.splice() "REMOVENDO ITENS DA ARRAY"
 
 const num = [5, 6, 7, 8]
 const final = num.splice(2, 1) //a partir do index 2 remover 1 item
@@ -133,9 +139,9 @@ const final = num.splice(2, 1) //a partir do index 2 remover 1 item
 console.log(num)
 console.log(final)
 
-***********************************************
-***********************************************
-//forEach
+************************************************
+***************************************************************
+// Array.prototype.forEach() "EXECUTA CADA ELEMENTO DO ARRAY"
 
 let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco']
 
@@ -143,17 +149,25 @@ numbers.forEach(numero => {
     console.log(numero);
 })
 
-***********************************************
-***********************************************
-//INVERTER ARRAY
+************************************************
+***************************************************************
+// Array.prototype.reverse() "INVERTER ARRAY"
 
 let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco']
 
 console.log(numbers.reverse());
+************************************************
+***************************************************************
+// Array.prototype.sort() "ORDENANDO ARRAY"
 
-***********************************************
-***********************************************
-//ESVAZIANDO ARRAY
+let clientes = ["Andre", "Jose", "Marcela"]
+
+clientes.sort()
+
+console.log(clientes)
+************************************************
+***************************************************************
+// "ESVAZIANDO ARRAY"
 
 let num = [5, 6, 7, 8]
 
@@ -162,9 +176,10 @@ let num = [5, 6, 7, 8]
 //num.splice(0, num.length)
 console.log(num);
 
-***********************************************
-***********************************************
-//CONCATENANDO ARRAY
+************************************************
+***************************************************************
+// Array.prototype.concat() "CONCATENANDO ARRAY"
+
 let numbers = [5, 6, 7, 8]
 let letters = ['a', 'b', 'c']
 
@@ -174,9 +189,10 @@ half = all.slice(3, 5) //dividir array (inicio/fim)
 console.log(all)
 console.log(half)
 
-***********************************************
-***********************************************
-//JOIN ARRRAY
+************************************************
+***************************************************************
+// Array.prototype.join() "JOIN ARRRAY - JUNTANDO ARRAY"
+
 let clientes = ["Andre", "Jose", "Marcela"]
 
 let clientsJoin = clientes.join('.')
@@ -184,20 +200,9 @@ let clientsJoin = clientes.join('.')
 console.log(clientsJoin)
 
 
-***********************************************
-***********************************************
-//REVERTENDO ARRAY
-
-let clientes = ["Andre", "Jose", "Marcela"]
-
-//clientes.sort() //Ordem alfabetica
-clientes.reverse() //Ordem alfabetica reversa
-
-console.log(clientes)
-
-***********************************************
-***********************************************
-//VERIRICANDO ELEMENTOS NA ARRAY
+************************************************
+***************************************************************
+// "VERIRICANDO ELEMENTOS NA ARRAY"
 
 const tempLondon = [18, -13, 8, 2, 4]
 
@@ -206,9 +211,9 @@ const tempPositive = tempLondon.every(function(value) {
 })
 
 console.log(tempPositive) //valores true or false
-***********************************************
-***********************************************
-//FILTRANDO VALORES ARRAY
+************************************************
+***************************************************************
+// Array.prototype.filter() "FILTRANDO VALORES ARRAY"
 
 const tempLondon = [18, -13, 8, 2, 4]
 
@@ -219,16 +224,16 @@ const tempPositive = tempLondon.filter(function(value) {
 // const tempPositive = tempLondon.filter(value => value >= 0) //ARROW FUNCTION
 
 console.log(tempPositive) //valores positivo
-***********************************************
-***********************************************
-// LOOPS EM ARRAY
+************************************************
+***************************************************************
+// "LOOPS EM ARRAY"
 
 let produtos = ['sapato', 'camisa', 'calça', 'bone']
 
 for (let n = 0; n  < produtos.length; n++) {
     console.log(produtos[n]);
 }
-***********************************************/
+************************************************/
 
 
 
@@ -240,41 +245,37 @@ for (let n = 0; n  < produtos.length; n++) {
 
 
             //METODOS DE STRING
-/************************************************
-// TRIM (Remover tudo que não é string)
+/***************************************************************
+// String.prototype.trim() "Remover tudo que não é string"
 
 let nome = '            Fulano'
 
 console.log(nome.trim);
 ************************************************
-************************************************
-// padStart (INSERIR CARACTERES ANTES DA STRING)
-// padEnd (INSERIR CARACTERES DEPOIS DA STRING)
+***************************************************************
+// String.prototype.padStart() "INSERIR CARACTERES ANTES DA STRING"
+// String.prototype.padEnd "INSERIR CARACTERES DEPOIS DA STRING"
+
 let numero = '450'
 
 console.log(numero.padStart(6, '0')); // quantidade de caracter e caracter a ser inserido
 console.log(numero.padEnd(6, '0'));
 ************************************************
+***************************************************************
+// "DIVIDIR UMA STRING POR UM SEPARADOR E ADICIONAR EM UM ARRAY"
+// String.prototype.split() 
+
+let frase = 'O rato roeu,a roupa do rei de roma'
+
+let palavras = frase.split(' ')
+console.log(palavras);
+************************************************
+***************************************************************
+// String.prototype.repeat() "REPETE STRING DE ACORDO COM PARAMETRO NUMBER"
+
+let palavra = 'casa '
+console.log(palavra.repeat(3));
 ************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*************************************************/
 
 
  
@@ -286,15 +287,15 @@ console.log(numero.padEnd(6, '0'));
  
  
                     // FUNCTION
-/************************************************ 
+/************************************************
 
 function statusVenda(status, total) { 
     console.log('Transação ' + status + '. O valor total foi R$' + total) 
 } 
 
 statusVenda('Aprovada', 75) 
-************************************************ 
-************************************************ 
+************************************************
+***************************************************************
 
 function porcentagem10(preco) { 
     return preco - (preco * 10/100) 
@@ -306,24 +307,6 @@ function porcentagem10(preco) {
 console.log(porcentagem10(20)) 
 
 ************************************************/ 
-
-
- 
-
-
-
-
-
- 
- 
-            // OPERADOR CONDICIONAL TERNARIO
-/************************************************ 
-let driver = 90 
-
-let speed = driver > 110 ? 'Acima' : 'Abaixo' 
-
-console.log(speed) 
-************************************************/
  
 
  
@@ -335,7 +318,7 @@ console.log(speed)
  
  
             // OPERADORES LOGICO
-/************************************************ 
+/***************************************************************
 // && (AND) - || (OU) - ! (NOT) 
 
 let temIdade = true 
@@ -346,19 +329,19 @@ console.log(podeVotar)
 
 let podeViajar = !podeVotar 
 console.log(podeViajar) 
-************************************************/ 
+************************************************
+***************************************************************
+// OPERADOR CONDICIONAL TERNARIO
 
+let driver = 90 
 
+let speed = driver > 110 ? 'Acima' : 'Abaixo' 
 
+console.log(speed)              
+************************************************
+***************************************************************
+// IF E ELSE
 
-
-
-
- 
- 
- 
-                // IF E ELSE
-/************************************************ 
 let driverSpeed = 40 
  
 if (driverSpeed > 110) { 
@@ -370,19 +353,10 @@ else if (driverSpeed > 40 && driverSpeed <= 110) {
 else { 
     console.log('Velocidade baixa'); 
 } 
-************************************************/ 
+************************************************
+***************************************************************
+// SWITCH E CASE
 
-
-
-
-
-
-
- 
- 
- 
-                // SWITCH E CASE
-/************************************************ 
 let airport = 'A' 
 
 switch (airport) { 
@@ -398,7 +372,7 @@ switch (airport) {
     default: 
 console.log('Esse Aeroporto não existe'); 
 } 
-***********************************************/ 
+************************************************/ 
  
 
 
@@ -410,7 +384,7 @@ console.log('Esse Aeroporto não existe');
  
 
                 // LOOP
-/************************************************ 
+/***************************************************************
 
 for (i = 1; i <10; i++) {
     console.log('Numero ', i)
@@ -423,23 +397,23 @@ for (i = 0; i <= 50; i++) {
         console.log(`${i} é impar`);
     }
 }
-***********************************************
-************************************************ 
+************************************************
+***************************************************************
 
 while (i <= 20) {
     console.log('Numero ', i)
     i++
 }
-***********************************************
-************************************************ 
+************************************************
+***************************************************************
 i = 1
 
 do {
     console.log('Numero ', i)
     i++
 } while (i <= 10)
-***********************************************
-************************************************ 
+************************************************
+***************************************************************
 const myCar = {
     model: 'BMW',
     year: 2022
@@ -449,15 +423,15 @@ const myCar = {
 for (let i in myCar)
     console.log(i, myCar[i])
 
-***********************************************
-************************************************ 
+************************************************
+***************************************************************
 const friends = ['Marcos', 'Ana', 'Jose']
 
 for (let i in friends)
 console.log(i)
 
-***********************************************
-************************************************ 
+************************************************
+*************************************************************** 
 // BREAK
 
 i = 1
@@ -467,8 +441,8 @@ while (i <= 10) {
     i++
 }
 
-***********************************************
 ************************************************
+***************************************************************
 //CONTINUE
 
 
@@ -479,7 +453,7 @@ for (let i = 20; i >= 0; i--) {
     }
     console.log(i);
 }
-***********************************************/
+************************************************/
 
 
 
@@ -491,7 +465,7 @@ for (let i = 20; i >= 0; i--) {
 
 
         //FACTORY E CONSTRUCTOR
-/*********************************************** 
+/***************************************************************
 const livro = { 
     livroTitulo: 'Bomba atomica', 
     livroAutor: 'Perry Mason', 
@@ -512,8 +486,8 @@ livro.printLivro()
 //    console.log('Imprimindo...'); 
 //} 
 //printLivro() 
-*********************************************** 
-*********************************************** 
+************************************************
+***************************************************************
 function criarLivro(titulo, autor, paginas) { 
     const livro = { 
         livroTitulo: titulo, 
@@ -530,8 +504,8 @@ const livro1 = criarLivro('Bomba atomica', 'Perry Mason', 350)
 livro1.cor = 'Branco' // adicionar propriedades ao objeto 
 
 console.log(livro1) 
-*********************************************** 
-*********************************************** 
+************************************************
+***************************************************************
 function CriarLivro(titulo, autor, paginas) { 
         this.livroTitulo = titulo, 
         this.livroAutor = autor, 
@@ -542,4 +516,4 @@ function CriarLivro(titulo, autor, paginas) {
 const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350) 
 
 console.log(livro1) 
-***********************************************/
+************************************************/
