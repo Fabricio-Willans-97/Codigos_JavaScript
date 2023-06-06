@@ -72,17 +72,23 @@
         max = Math.floor(60);
         let numSorteados = []
 
-        for (let num = numSorteados; num.length <= 5; num.push(randomNumber)) {
-            randomNumber = Math.floor(Math.random() * (max - min) + min)
-                if (numSorteados.includes(randomNumber) == true) {
-                    randomNumber = Math.floor(Math.random() * (max - min) + min)
+        while (numSorteados.length <= 5) {
+            randomNumber = Math.floor(Math.random() * (max - min) + min).toString()
+                if (numSorteados.includes(randomNumber) == false && randomNumber.length < 2) {
+                    randomNumber = '0' + randomNumber
+                    numSorteados.push(randomNumber)
                 }
+                else if (numSorteados.includes(randomNumber) == false && randomNumber.length == 2 ) {
+                    numSorteados.push(randomNumber)
+                } 
+                else continue
         }
 
         let numSorteadosOrdem = numSorteados.sort(function(a, b) {
             return a - b;
         })
-        console.log(numSorteadosOrdem)
+        console.log(numSorteadosOrdem);
+        // document.getElementById('numSorteados').innerHTML = numSorteadosOrdem.join(' - ')
     }
 
     numAleatorio()
