@@ -68,25 +68,38 @@
 /* 6 Números aleatórios (Mega-sena) /
 
     function numAleatorio() {
-        min = Math.ceil(1);
-        max = Math.floor(60);
         let numSorteados = []
+        let min = Math.ceil(1);
+        let max = Math.floor(60);
 
+        // CORRIGIR NÚMEROS REPETIDOS
         while (numSorteados.length <= 5) {
-            randomNumber = Math.floor(Math.random() * (max - min) + min).toString()
-                if (numSorteados.includes(randomNumber) == false && randomNumber.length < 2) {
-                    randomNumber = '0' + randomNumber
+            let randomNumber = Math.floor(Math.random() * (max - min) + min).toString()
+                if (numSorteados.includes(randomNumber) == false) {
                     numSorteados.push(randomNumber)
                 }
-                else if (numSorteados.includes(randomNumber) == false && randomNumber.length == 2 ) {
-                    numSorteados.push(randomNumber)
-                } 
-                else continue
+                else { 
+                    console.log(`${randomNumber} repetiu`); // Verificar quais números repetiram
+                    continue
+                }
         }
 
-        let numSorteadosOrdem = numSorteados.sort(function(a, b) {
+        // CORRIGIR NÚMEROS ABAIXO DE 2 DIGITOS
+        function formatDecimal(){
+            for (let n = 0; n < numSorteados.length; n++) {
+                if (numSorteados[n].length < 2) {
+                    numSorteados[n] = '0' + numSorteados[n]
+                    console.log(`${numSorteados[n]} é abaixo de 2 digitos`); // Verificar qual número é abaixo de 2 digitos
+                } else continue
+            }
+            return numSorteados
+        }
+
+        //CORRIGIR ORDEM DOS NÚMEROS
+        let numSorteadosOrdem = formatDecimal().sort(function(a, b) {
             return a - b;
         })
+
         console.log(numSorteadosOrdem);
         // document.getElementById('numSorteados').innerHTML = numSorteadosOrdem.join(' - ')
     }
