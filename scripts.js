@@ -62,17 +62,65 @@ let pessoa = {
 }
 
 console.log(Object.keys(pessoa));
+************************************************
+***************************************************************
+// DESTRUCTURING ASSIGNMENT (OBJETOS)
+
+const pessoa = {
+    nome: 'fulano',
+    idade: 15,
+    cor: 'azul'
+}
+
+const {nome: valNome, idade: valIdade, cor: valCor} = pessoa
+
+console.log(valNome);
+console.log(valIdade);
+console.log(valNome + ' tem ' + valIdade + ' anos de idade');
+************************************************
+***************************************************************
+// JAVASCRIPT OBJECT NOTATION "JSON"
+
+// Rigoroso na estrutura
+// Apenas aspas duplas
+// Não aceita comentários
+
+let pessoa = {
+    "nome": "fulano",
+    "idade": 23,
+    "profissao": "programador",
+    "linguagens": ["PHP", "JS", "Python"]
+}
+console.log(pessoa.linguagens);
+************************************************
+***************************************************************
+// JSON PARA STRING E VICE-VERSA
+
+let pessoa = {
+    "nome": "fulano",
+    "idade": 23,
+    "profissao": "programador",
+    "linguagens": ["PHP", "JS", "Python"]
+}
+
+//converter JSON para STRING
+let pessoaString = JSON.stringify(pessoa)
+console.log(pessoaString);
+
+//converter STRING para JSON
+let pessoaJSON = JSON.parse(pessoaString)
+console.log(pessoaJSON);
 ************************************************/
 
 
 
 
 
-
  
 
  
- 
+
+
                     // ARRAY
 /***************************************************************
 let compras = ['feijão', 'arroz', 'leite', 'pão'] 
@@ -233,6 +281,17 @@ let produtos = ['sapato', 'camisa', 'calça', 'bone']
 for (let n = 0; n  < produtos.length; n++) {
     console.log(produtos[n]);
 }
+************************************************
+***************************************************************
+// DESTRUCTURING ASSIGNMENT (ARRAY)
+
+let animais = ['doginho', 'gato', 'arara']
+
+let [animal1, animal2, animal3] = animais
+
+console.log(animal1);
+console.log(animal2);
+console.log(animal3);
 ************************************************/
 
 
@@ -306,10 +365,25 @@ function porcentagem10(preco) {
 
 console.log(porcentagem10(20)) 
 
-************************************************/ 
- 
+************************************************
+***************************************************************
+// REST OPERATOR
+let num1 = 5
+let num2 = 7
+let num3 = 14
+
+function print(...args) {
+    for (let n = 0; n < args.length; n++) {
+        console.log(args[n]);
+    }
+}
+
+print(num1, num2)
+print(num3, num1)
+************************************************/
 
  
+
 
 
 
