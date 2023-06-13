@@ -110,6 +110,26 @@ console.log(pessoaString);
 //converter STRING para JSON
 let pessoaJSON = JSON.parse(pessoaString)
 console.log(pessoaJSON);
+************************************************
+***************************************************************
+// METHOD DEFINITIONS
+
+let calculadora = {
+    somar: function(a,b) {
+        return a + b
+    },
+    subtrair: function(a,b) {
+        return a - b
+    },
+    dividir: function(a,b) {
+        return a / b
+    },
+    multiplicar: function(a,b) {
+        return a * b
+    }
+}
+
+console.log(calculadora.somar(2, 3));
 ************************************************/
 
 
@@ -334,6 +354,29 @@ console.log(palavras);
 
 let palavra = 'casa '
 console.log(palavra.repeat(3));
+************************************************
+***************************************************************
+// String.prototype.toUpperCase() "RETORNA O VALOR DA STRING ORIGINAL CONVERTIDO EM LETRAS MAIÚSCULAS"
+// String.prototype.toLowerCase() "RETORNA O VALOR DA STRING ORIGINAL CONVERTIDO EM LETRAS MINÚSCULAS"
+// String.prototype.toString() "RETORNA UMA STRING REPRESENTANDO O OBJETO ESPECIFICADO"
+
+let palavra1 = 'palavra'
+let palavra2 = 'CASA'
+let numero = 1562
+
+console.log(palavra1.toUpperCase())
+console.log(palavra2.toLowerCase())
+console.log(numero.toString())
+************************************************
+***************************************************************
+************************************************
+***************************************************************
+************************************************
+***************************************************************
+************************************************
+***************************************************************
+************************************************
+***************************************************************
 ************************************************/
 
 
