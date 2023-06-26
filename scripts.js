@@ -136,6 +136,85 @@ console.log(calculadora.somar(2, 3));
 
 
 
+
+
+
+
+
+                // ORIENTAÇÃO A OBJETOS
+/***************************************************************
+let animal = {
+    animalCriado: '',
+    setAnimal: function(novoAnimal) {
+        this.animalCriado = novoAnimal
+    },
+    getAnimal: function() {
+        return this.animalCriado
+    }
+}
+
+animal.setAnimal('Cachorro')
+console.log(animal.getAnimal());
+************************************************
+***************************************************************
+// PROTOTYPES
+
+let pessoa = {
+    maos: 2
+}
+
+console.log(Object.getPrototypeOf(pessoa));
+console.log(Object.getPrototypeOf(pessoa) === Object.prototype);
+console.log(pessoa.hasOwnProperty('maos'));
+
+let pessoaNova = Object.create(pessoa)
+
+console.log(pessoaNova.maos);
+console.log(Object.getPrototypeOf(pessoaNova) === Object.prototype);
+console.log(Object.getPrototypeOf(pessoaNova) === pessoa);
+console.log(pessoaNova.hasOwnProperty('maos'))
+************************************************
+***************************************************************
+//CLASSES
+
+let cachorro = {
+    raca: 'Poodle',
+    patas: 4,
+    som: function(){
+        console.log('au au');
+    }
+}
+
+let gato = Object.create(cachorro)
+gato.raca = 'Maine'
+gato.som = function() {
+    console.log('miau');
+}
+
+console.log(cachorro);
+console.log(gato);
+gato.som()
+************************************************
+***************************************************************
+// CLASSES CONSTRUCTOR POR FUNÇÃO
+
+function criarAnimal(novoAnimal) {
+    let animal = Object.create({})
+    animal.especie = novoAnimal
+    return animal
+}
+
+let cachorro = criarAnimal('cachorro')
+
+console.log(cachorro.especie);
+************************************************
+***************************************************************
+
+************************************************/
+
+
+
+
  
 
  
