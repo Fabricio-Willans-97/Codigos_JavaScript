@@ -196,20 +196,58 @@ console.log(gato);
 gato.som()
 ************************************************
 ***************************************************************
-// CLASSES CONSTRUCTOR POR FUNÇÃO
+// CLASSES CONSTRUCTOR POR FUNCTION
 
-function criarAnimal(novoAnimal) {
+function criarAnimal(especie, patas, cor) {
     let animal = Object.create({})
-    animal.especie = novoAnimal
+    animal.especie = especie
+    animal.patas = patas
+    animal.cor = cor
     return animal
 }
 
-let cachorro = criarAnimal('cachorro')
+let cachorro = criarAnimal('cachorro', 3, 'azul')
+cachorro.som = function() {
+    console.log('au au');
+}
 
-console.log(cachorro.especie);
+console.log(cachorro);
+cachorro.som()
 ************************************************
 ***************************************************************
+// CLASSES CONSTRUCTOR POR NEW
 
+function CriarAnimal(especie, patas, cor) {
+    this.especie = especie
+    this.patas = patas
+    this.cor = cor
+    this.som = function() {
+        console.log('latido');
+    }
+}
+
+let cachorro = new CriarAnimal('cachorro', 3, 'azul')
+
+console.log(cachorro);
+cachorro.som()
+************************************************
+***************************************************************
+// CLASSES CONSTRUCTOR POR PROTOTYPE
+
+function CriarAnimal(especie, patas, cor) {
+    this.especie = especie
+    this.patas = patas
+    this.cor = cor
+}
+
+CriarAnimal.prototype.som = function() {
+    console.log('au au');
+}
+
+let cachorro = new CriarAnimal('cachorro', 3, 'azul')
+
+console.log(cachorro);
+cachorro.som()
 ************************************************/
 
 
@@ -713,3 +751,18 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ************************************************/
+
+function CriarAnimal(especie, patas, cor) {
+    this.especie = especie
+    this.patas = patas
+    this.cor = cor
+}
+
+CriarAnimal.prototype.som = function() {
+    console.log('au au');
+}
+
+let cachorro = new CriarAnimal('cachorro', 3, 'azul')
+
+console.log(cachorro);
+cachorro.som()
