@@ -248,8 +248,37 @@ let cachorro = new CriarAnimal('cachorro', 3, 'azul')
 
 console.log(cachorro);
 cachorro.som()
-************************************************/
+************************************************
+***************************************************************
+// class e constructor DO ES6
 
+class Pessoa {
+    constructor(nome, idade, cor) {
+        this.nome = nome
+        this.idade = idade
+        this.cor = cor
+    }
+}
+
+let fulano = new Pessoa('fulano', 41, 'parda')
+
+console.log(fulano);
+************************************************
+***************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+***************************************************************/
 
 
 
@@ -751,18 +780,19 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ************************************************/
+// class e constructor DO ES6
 
-function CriarAnimal(especie, patas, cor) {
-    this.especie = especie
-    this.patas = patas
-    this.cor = cor
+class Pessoa {
+    constructor(nome) {
+        this.nome = nome
+    }
+
+    idade() {
+        console.log(18);
+    }
 }
 
-CriarAnimal.prototype.som = function() {
-    console.log('au au');
-}
+let fulano = new Pessoa('fulano')
+Pessoa.prototype.cor = 'parda'
 
-let cachorro = new CriarAnimal('cachorro', 3, 'azul')
-
-console.log(cachorro);
-cachorro.som()
+console.log(fulano);
