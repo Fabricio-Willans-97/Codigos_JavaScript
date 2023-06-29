@@ -265,10 +265,62 @@ let fulano = new Pessoa('fulano', 41, 'parda')
 console.log(fulano);
 ************************************************
 ***************************************************************
+// Mais sobre class e constructor DO ES6
 
+class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome
+        this.idade = idade
+    }
 
+    saudacao() {
+        return 'olá'
+    }
+}
 
+Pessoa.prototype.cor = 'parda'
+Pessoa.prototype.profissao = 'dev web'
 
+let fulano = new Pessoa('fulano', 28)
+
+console.log(fulano);
+console.log(fulano.saudacao());
+console.log(Pessoa.prototype);
+************************************************
+***************************************************************
+// Override no protype
+
+class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome
+        this.idade = idade
+    }
+}
+
+Pessoa.prototype.cor = 'parda'
+Pessoa.prototype.nome = 'sem nome' //OVERRIDE
+let fulano = new Pessoa('fulano', 28)
+
+console.log(fulano.nome);
+console.log(Pessoa.prototype.nome);
+************************************************
+***************************************************************
+// Symbol "Valor padrão no prototype, não pode ser trocado"
+
+class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome
+        this.idade = idade
+    }
+}
+
+let nome = Symbol()
+Pessoa.prototype[nome] = 'sem nome'
+
+let fulano = new Pessoa('fulano', 28)
+
+console.log(fulano.nome);
+console.log(Pessoa.prototype[nome]);
 
 
 
@@ -780,19 +832,19 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ************************************************/
-// class e constructor DO ES6
+// GET e SET
 
 class Pessoa {
-    constructor(nome) {
+    constructor(nome, idade) {
         this.nome = nome
-    }
-
-    idade() {
-        console.log(18);
+        this.idade = idade
     }
 }
 
-let fulano = new Pessoa('fulano')
-Pessoa.prototype.cor = 'parda'
+let nome = Symbol()
+Pessoa.prototype[nome] = 'sem nome'
 
-console.log(fulano);
+let fulano = new Pessoa('fulano', 28)
+
+console.log(fulano.nome);
+console.log(Pessoa.prototype[nome]);
