@@ -107,3 +107,161 @@
     numAleatorio()
 
 */
+
+
+
+/* CONTADOR DE PALAVRAS /
+
+    class WordCounter {
+        countWords(string) {
+            // Verifica se a string é vazia
+            if (!string) {
+                return 0;
+            }
+      
+            // Divide a string em palavras usando expressão regular
+            const words = string.split(/\s+/);
+      
+            // Retorna o número de palavras na string
+            return words.length;
+        }
+    }
+  
+    const counter = new WordCounter();
+    const text = "Olá, tudo bem? Quantas palavras tem nesta frase?";
+    const wordCount = counter.countWords(text);
+    console.log("Número de palavras:", wordCount);
+*/
+
+
+
+/* CALCULADORA DE RETANGULOS /
+
+    class Retangulo {
+        constructor(largura, altura) {
+            this.largura = largura;
+            this.altura = altura;
+        }
+
+        calcularArea() {
+            return this.largura * this.altura;
+        }
+
+        calcularPerimetro() {
+            return 2 * (this.largura + this.altura);
+        }
+    }
+
+    const retangulo = new Retangulo(5, 8);
+    console.log("Área do retângulo:", retangulo.calcularArea());
+    console.log("Perímetro do retângulo:", retangulo.calcularPerimetro());
+*/
+
+
+
+/* CONTA BANCARIA /
+    class ContaBancaria {
+    constructor(numeroConta, saldo) {
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+    }
+  
+    depositar(valor) {
+        this.saldo += valor;
+        console.log(`Depósito de R$${valor} realizado. Saldo atual: R$${this.saldo}`);
+    }
+  
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            console.log(`Saque de R$${valor} realizado. Saldo atual: R$${this.saldo}`);
+        } else {
+            console.log("Saldo insuficiente para realizar o saque.");
+        }
+    }
+  
+    consultarSaldo() {
+      return this.saldo;
+    }
+  }
+  
+  // Exemplo de uso da classe ContaBancaria
+  const minhaConta = new ContaBancaria("123456", 1000);
+  minhaConta.depositar(500);
+  console.log(minhaConta.consultarSaldo());
+*/
+
+
+
+/* SISTEMA DE RESERVAS DE VOO /
+
+    class Voo {
+        constructor(codigoVoo, origem, destino, assentosDisponiveis) {
+            this.codigoVoo = codigoVoo;
+            this.origem = origem;
+            this.destino = destino;
+            this.assentosDisponiveis = assentosDisponiveis;
+        }
+  
+        reservarAssento() {
+            if (this.assentosDisponiveis > 0) {
+                this.assentosDisponiveis--;
+                console.log("Assento reservado com sucesso!");
+            } else {
+                console.log("Não há assentos disponíveis para reserva.");
+            }
+        }
+  
+        consultarAssentosDisponiveis() {
+            return this.assentosDisponiveis;
+        }
+    }
+  
+    // Exemplo de uso da classe Voo
+    const meuVoo = new Voo("123", "São Paulo", "Rio de Janeiro", 100);
+    meuVoo.reservarAssento();
+    console.log(meuVoo.consultarAssentosDisponiveis());
+*/
+
+
+
+/* SISTEMA BIBLIOTECA /
+
+    class Livro {
+        constructor(titulo, autor) {
+            this.titulo = titulo;
+            this.autor = autor;
+            this.disponivel = true;
+        }
+  
+        emprestar() {
+            if (this.disponivel) {
+                this.disponivel = false;
+                console.log("Livro emprestado com sucesso!");
+            } else {
+                console.log("O livro não está disponível para empréstimo.");
+            }
+        }
+  
+        devolver() {
+            if (!this.disponivel) {
+                this.disponivel = true;
+                console.log("Livro devolvido com sucesso!");
+            } else {
+                console.log("O livro já está disponível.");
+            }
+        }
+  
+        consultarDisponibilidade() {
+            return this.disponivel ? "Disponível" : "Indisponível";
+        }
+    }
+  
+    // Exemplo de uso da classe Livro
+    const meuLivro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien");
+    console.log(meuLivro.consultarDisponibilidade()); // "Disponível"
+    meuLivro.emprestar();
+    console.log(meuLivro.consultarDisponibilidade()); // "Indisponível"
+    meuLivro.devolver();
+    console.log(meuLivro.consultarDisponibilidade()); // "Disponível"
+*/

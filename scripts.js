@@ -321,14 +321,54 @@ let fulano = new Pessoa('fulano', 28)
 
 console.log(fulano.nome);
 console.log(Pessoa.prototype[nome]);
+************************************************
+***************************************************************
+// GET e SET
+// get: resgata um valor de uma propriedade
+// set: altera valor de uma propriedade
 
+class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome
+        this.idade = idade
+    }
 
+    get getCor() {
+        return this.cor
+    }
 
+    set setCor(cor) {
+        this.cor = cor
+    }
+}
 
+let fulano = new Pessoa('fulano', 25)
+console.log(fulano);
 
+fulano.setCor = 'azul'
+console.log(fulano.getCor);
+************************************************
+***************************************************************
+// extends "HERANÇA"
 
+class Pai {
+    constructor(pernas) {
+        this.pernas = pernas
+    }
+}
 
+class Filho extends Pai {
+    constructor(pernas, idade) {
+        super(pernas, pernas)
+        this.idade = idade
+    }
+}
 
+let filho = new Filho(2, 24)
+console.log(filho);
+
+console.log(filho instanceof Pai); // Verifica quem é o pai do objeto utilizado
+console.log(new Filho instanceof Pai);
 
 ***************************************************************/
 
@@ -832,19 +872,3 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ************************************************/
-// GET e SET
-
-class Pessoa {
-    constructor(nome, idade) {
-        this.nome = nome
-        this.idade = idade
-    }
-}
-
-let nome = Symbol()
-Pessoa.prototype[nome] = 'sem nome'
-
-let fulano = new Pessoa('fulano', 28)
-
-console.log(fulano.nome);
-console.log(Pessoa.prototype[nome]);
