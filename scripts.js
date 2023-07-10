@@ -605,16 +605,6 @@ let numero = 1562
 console.log(palavra1.toUpperCase())
 console.log(palavra2.toLowerCase())
 console.log(numero.toString())
-************************************************
-***************************************************************
-************************************************
-***************************************************************
-************************************************
-***************************************************************
-************************************************
-***************************************************************
-************************************************
-***************************************************************
 ************************************************/
 
 
@@ -872,3 +862,48 @@ const livro1 = new CriarLivro('Bomba atomica', 'Perry Mason', 350)
 
 console.log(livro1) 
 ************************************************/
+
+
+
+
+
+
+
+
+
+
+                    // DEBUGS E ERROS
+/***************************************************************
+// debugger e input por função
+
+function checkNumber(num) {
+    let number = Number(num)
+    if (Number.isNaN(number)) {
+        alert("Por favor,apenas numero")
+        console.log(num);
+        debugger
+    } else {
+        console.log(num);
+        debugger
+    }
+}
+debugger
+let number = prompt('Digite um numero')
+checkNumber(number)
+************************************************
+***************************************************************
+// EXCEPTION
+
+function testString(palavra) {
+    if (typeof palavra != 'string') {
+        throw new Error('O parametro precisa ser uma string')
+    }
+    else {
+        console.log(palavra);
+    }
+}
+
+testString('445')
+***************************************************************
+************************************************/
+
