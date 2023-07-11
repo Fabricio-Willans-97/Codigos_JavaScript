@@ -904,6 +904,42 @@ function testString(palavra) {
 }
 
 testString('445')
+************************************************
 ***************************************************************
-************************************************/
+// try, catch e finally
 
+try {
+    let c = a + b
+} catch(error) {
+    console.log('Algo deu errado: ' + error);
+} finally {
+    console.log('Executou')
+}
+************************************************
+***************************************************************
+// ASSERTION
+
+let arr = [1, 2, 3, 4, 5]
+let arr2 = [2, 3]
+
+function iterarArray(arr) {
+    if (arr.lenght == 0) {
+        throw new Error('Array sem elemento')
+    } else {
+        for (let i = 0; arr.lenght; i++) {
+            console.log(i);
+        }
+    }
+}
+
+function arrVazio(arr) {
+    if (arr.lenght > 0) {
+        throw Error ('Array sem elementos')
+    } else {
+        console.log('Funcionando');
+    }
+}
+
+iterarArray(arr)
+iterarArray(arr2)
+************************************************/
