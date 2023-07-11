@@ -919,27 +919,29 @@ try {
 ***************************************************************
 // ASSERTION
 
-let arr = [1, 2, 3, 4, 5]
-let arr2 = [2, 3]
+let array = [1, 2, 3, 4]
+let array2 = [1, 2, 3, 4]
+let array3 = []
 
 function iterarArray(arr) {
-    if (arr.lenght == 0) {
+    if (arr.length == 0) {
         throw new Error('Array sem elemento')
     } else {
-        for (let i = 0; arr.lenght; i++) {
+        for(let i = 0; i < arr.length; i++) {
             console.log(i);
         }
     }
 }
 
 function arrVazio(arr) {
-    if (arr.lenght > 0) {
-        throw Error ('Array sem elementos')
+    if (arr.length > 0) {
+        throw Error('Array não pode ter elementos')
     } else {
         console.log('Funcionando');
     }
 }
 
-iterarArray(arr)
-iterarArray(arr2)
+iterarArray(array)
+iterarArray(array2)
+arrVazio(array3)
 ************************************************/
