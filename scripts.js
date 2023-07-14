@@ -945,3 +945,31 @@ iterarArray(array)
 iterarArray(array2)
 arrVazio(array3)
 ************************************************/
+
+
+
+
+
+
+
+
+
+
+                // EXPRESSÕES REGULARES
+/***************************************************************
+//Criando e testando uma expressão regular
+
+let reg1 = new RegExp("teste")
+let reg2 = /teste/
+
+console.log(reg1.test('Tem teste?'));
+console.log(reg2.test('Tem teste?'));
+************************************************
+***************************************************************
+//Conjuntos
+const numeros = /[123456]/
+const numeros2 = /[1-20]/
+
+console.log(numeros.test("Tem o numero 3?"));
+console.log(numeros2.test("Tem o numero 24563?"));
+************************************************/
