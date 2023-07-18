@@ -973,3 +973,87 @@ const numeros2 = /[1-20]/
 console.log(numeros.test("Tem o numero 3?"));
 console.log(numeros2.test("Tem o numero 24563?"));
 ************************************************/
+
+
+
+
+
+
+
+
+
+
+            // PROGRAMAÇÃO ASSINCRONA
+/***************************************************************
+//CALLBACKS
+
+console.log('Ainda não chamou o callback');
+
+setTimeout(function() {
+    console.log("Ola mundo");
+}, 2000); // 2 segundos
+
+console.log('Ainda não chamou o callback');
+************************************************
+***************************************************************
+// PROMISES
+
+let promessa = Promise.resolve(4 + 8)
+
+console.log('teste');
+console.log(promessa);
+
+// promessa.then((value) => {console.log(`O valor é ${value}`)})
+promessa.then((value) => {return value + 5})
+.then((value) => {console.log(`O novo valor é ${value}`)})
+************************************************
+***************************************************************
+// Erros no Promise
+
+let promisseErrada = Promise.resolve(new Error ("Algo de errado não esta certo"))
+
+promisseErrada
+    .then((value) => {console.log(value);})
+    .catch(reason => console.log("Erro: " + reason))
+************************************************
+***************************************************************
+// Rejeitando Promises
+
+function verifNum(num) {
+    return new Promise((resolve, reject) => {
+        if (num == 2) {
+            resolve(console.log("O numero é: " + num))
+        } else {
+            reject(new Error("Falhou"))
+        }
+    })
+}
+
+verifNum(2)
+verifNum(5)
+************************************************
+***************************************************************
+// Várias Promises
+
+const promise1 = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve(10)
+    }, 5000)
+})
+
+const promise2 = Promise.resolve(10)
+
+const promise3 = new Promise((resolve, reject) => {
+    resolve(10)
+})
+
+Promise.all([promise1, promise2, promise3]).then((values) => console.log(values))
+************************************************
+***************************************************************
+
+
+
+
+
+
+************************************************/
