@@ -1050,10 +1050,47 @@ const promise3 = new Promise((resolve, reject) => {
 Promise.all([promise1, promise2, promise3]).then((values) => console.log(values))
 ************************************************
 ***************************************************************
+// Funções assincronas
 
+async function somar(a, b) {
+    return a + b
+}
 
+somar(2,4).then(value => console.log(value))
+************************************************
+***************************************************************
+// Await
 
+function somaComDelay(a, b) {
+    return new Promise(resolve => {
+        setTimeout(function() {
+            resolve(a + b)
 
+        }, 4000)
+    })
+}
 
+async function resSoma(a, b, c) {
+    let x = somaComDelay(a, b)
+    let y = c
 
+    return await x + y
+}
+
+console.log(resSoma(1, 2, 3).then(value => console.log(value)));
+************************************************
+***************************************************************
+// Generations
+
+function* criarId() {
+    let id = 0
+    while(true) {
+        yield id++
+    }
+}
+
+let criaId = criarId()
+
+console.log(criaId.next().value);
+console.log(criaId.next().value);
 ************************************************/
