@@ -8,4 +8,4 @@
 <a href="https://codepen.io/Fabricio-Willans-97/pen/GRXgmgR">Calculadora Gorjeta</a> <br>
 <a href="https://codepen.io/Fabricio-Willans-97/pen/GRXZzzz">Cor de fundo aleatório</a> <br>
 <a href="https://codepen.io/Fabricio-Willans-97/pen/WNgwWYg">Advinhe o número</a> <br>
-<a href="https://codepen.io/Fabricio-Willans-97/pen/WNaqXge">Gerador de 6 Numeros Aleatórios</a>
+<a href="https://codepen.io/Fabricio-Willans-97/pen/WNaqXge">Gerador de Números Aleatórios</a>

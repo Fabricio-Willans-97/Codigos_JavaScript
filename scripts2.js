@@ -65,15 +65,31 @@
 
 
 
-/* 6 Números aleatórios (Mega-sena) /
+/* Números aleatórios (Mega-sena) /
+
+        // QUANTOS NÚMEROS SERÃO GERADOS
+    function formatSplit(value) {
+        if (value == 1) {
+            return `${value} Número`
+        }
+        else {
+            return `${value} Números`
+        }
+    }
+
+    function valNum() {
+        let split = document.getElementById('splitInput').value
+        document.getElementById('splitValue').innerHTML = formatSplit(split)
+    }
 
     function numAleatorio() {
         let numSorteados = []
         let min = Math.ceil(1);
         let max = Math.floor(60);
+        let qtdNum = 10 // document.getElementById('splitInput').value
 
         // CORRIGIR NÚMEROS REPETIDOS
-        while (numSorteados.length <= 5) {
+        while (numSorteados.length < qtdNum) {
             let randomNumber = Math.floor(Math.random() * (max - min) + min).toString()
                 if (numSorteados.includes(randomNumber) == false) {
                     numSorteados.push(randomNumber)
@@ -95,7 +111,7 @@
             return numSorteados
         }
 
-        //CORRIGIR ORDEM DOS NÚMEROS
+        // CORRIGIR ORDEM DOS NÚMEROS
         let numSorteadosOrdem = formatDecimal().sort(function(a, b) {
             return a - b;
         })
@@ -103,7 +119,6 @@
         console.log(numSorteadosOrdem);
         // document.getElementById('numSorteados').innerHTML = numSorteadosOrdem.join(' - ')
     }
-
     numAleatorio()
 
 */
