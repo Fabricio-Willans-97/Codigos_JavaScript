@@ -627,6 +627,16 @@ statusVenda('Aprovada', 75)
 ************************************************
 ***************************************************************
 
+function saudacao(nome){
+    if(nome == 'jota'){
+        return 'ola jota'
+    } else return 'ola estranho'
+} 
+
+console.log(saudacao('jota'));
+************************************************
+***************************************************************
+
 function porcentagem10(preco) { 
     return preco - (preco * 10/100) 
 } 
@@ -651,6 +661,23 @@ function print(...args) {
 
 print(num1, num2)
 print(num3, num1)
+************************************************
+***************************************************************
+// ARROW FUNCTION
+
+const parImpar = (n) => {
+    if(n % 2 == 0) {
+        return `o numero ${n} é par`
+    } else return `o numero ${n} é impar`    
+}
+
+console.log(parImpar(2));
+console.log(parImpar(5));
+
+// SIMPLES
+const multip = (a, b) => a * b
+console.log(multip(2, 3));
+
 ************************************************/
 
  
