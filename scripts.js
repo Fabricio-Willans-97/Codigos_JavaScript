@@ -678,8 +678,32 @@ console.log(parImpar(5));
 const multip = (a, b) => a * b
 console.log(multip(2, 3));
 
-************************************************/
+************************************************
+***************************************************************
+// CLOSURE
 
+function lembrarSoma(x){
+    return function(y){
+        return x + y
+    }
+}
+
+let soma1 = lembrarSoma(2)
+console.log(soma1(3));
+
+let soma1 = lembrarSoma(2)
+console.log(soma1(3));
+
+
+
+function lembrarSoma(x){
+    return y => x + y       //arrow function
+}
+
+let soma1 = lembrarSoma(3)
+console.log(soma1(3));
+
+************************************************/
  
 
 
